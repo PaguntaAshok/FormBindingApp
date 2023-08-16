@@ -1,0 +1,12 @@
+version: "3"
+services:
+  application:
+    image: formweb-app
+    ports:
+      - "8080:8080"
+    networks:
+      - springboot-db-net
+    volumes:
+      - /data/springboot-app
+networks:
+  springboot-db-net:
